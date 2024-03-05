@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">MarvelFandom</string>
+    <string name="app_name">Marvel Fandom</string>
+    <string name="dummy_name">Lutfi Man</string>
+    <string name="dummy_alias">Lutbro</string>
+    <string name="dummy_category">Penjelajah Bumi</string>
+    <string name="dummy_desc">Description</string>
+    <string name="profile">About</string>
+    <string name="aliases">Aliases</string>
+    <string name="category">Category</string>
+    <string name="description">Description</string>
+    <string name="share">Share</string>
+    <string name="author">Lutfi Aldri Permana</string>
+    <string name="marvel_fandom_version_1_0">Marvel Fandom Version 1.0</string>
+    <string name="cp">© 2024 Marvel Fandom. All rights reserved.</string>
+    <string name="lutfialdripermana_gmail_com">lutfialdripermana@gmail.com</string>
 </resources>
