@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun showRecyclerView() {
         rvMarvels.layoutManager = LinearLayoutManager(this)
-        val listMarvelsAdapter = ListMarvelAdapter(getMarvelList())
+        val listMarvelsAdapter = ListMarvelAdapter(marvelList)
         rvMarvels.adapter = listMarvelsAdapter
     }
 }

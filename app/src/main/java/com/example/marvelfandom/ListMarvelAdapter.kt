@@ -16,8 +16,6 @@ class ListMarvelAdapter(private val listMarvel: ArrayList<Marvel>) :
         val tvName: TextView = itemView.findViewById(R.id.tv_item_name)
         val tvAliases: TextView = itemView.findViewById(R.id.tv_item_alias)
         val tvCategory: TextView = itemView.findViewById(R.id.tv_item_category)
-        val tvDesc: TextView = itemView.findViewById(R.id.tv_item_desc)
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
@@ -31,7 +29,10 @@ class ListMarvelAdapter(private val listMarvel: ArrayList<Marvel>) :
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (name, aliases, desc, avatar, category) = listMarvel[position]
+        val name = listMarvel[position].name
+        val aliases = listMarvel[position].alias
+        val category = listMarvel[position].category
+        val avatar = listMarvel[position].photo
 
 //        Glide req image
         Glide.with(holder.itemView.context).load(avatar).into(holder.imgAvatar)
@@ -39,7 +40,6 @@ class ListMarvelAdapter(private val listMarvel: ArrayList<Marvel>) :
         holder.tvName.text = name
         holder.tvAliases.text = aliases
         holder.tvCategory.text = category
-        holder.tvDesc.text = desc
 
 //        Listener CLick
         holder.itemView.setOnClickListener {
@@ -47,7 +47,5 @@ class ListMarvelAdapter(private val listMarvel: ArrayList<Marvel>) :
             intent.putExtra(DetailActivity.MARVEL_DATA, listMarvel[holder.adapterPosition])
             holder.itemView.context.startActivity(intent)
         }
-
     }
-
 }
